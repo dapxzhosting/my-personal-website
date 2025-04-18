@@ -72,7 +72,6 @@ section {
   position: relative;
   top: -60px;
 }
-}
 .img-fluid {
   max-width: 100%;
   height: auto;
@@ -131,8 +130,8 @@ section {
   background-color: rgba(0, 0, 0, 0.4);
   padding: 5px 5px;
   border-radius: 80px;
-  -webkit-backdrop-filter: blur(10px)
-  display: inline-block;
+  -webkit-backdrop-filter: blur(10px);
+display: inline-block;
 }
 .gatau {
   margin-top: 40px;
