@@ -1,0 +1,139 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url('https://www.transparenttextures.com/patterns/white-wall-3.png');
+}
+.navbar {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.navbar-toggler {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+.hero {
+  background: linear-gradient(to right, #007bff, #00c6ff);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+.hero-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid white;
+  margin-bottom: 15px;
+  transition: transform 0.4s;
+}
+.hero-img:hover {
+  transform: scale(1.05);
+}
+.typewriter h1 {
+  overflow: hidden;
+  border-right: 3px solid white;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 2px;
+  animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
+  font-size: 2.4rem;
+  font-weight: 600;
+  max-width: 100%;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: white }
+}
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 20px;
+  transition: color 0.3s, transform 0.3s;
+}
+.social-icons a:hover {
+  color: #ffc107;
+  transform: scale(1.2);
+}
+section {
+  padding: 80px 20px;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
+.gif-section {
+  position: relative;
+  top: -60px;
+}
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+.flip-envelope-container {
+  display: flex;
+  justify-content: center;
+  perspective: 1000px;
+}
+.flip-envelope {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+  cursor: pointer;
+}
+
+.flip-envelope .flip-front,
+.flip-envelope .flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.flip-envelope .flip-front {
+  color: #ff7675;
+}
+
+.flip-envelope .flip-back {
+  background-color: #ffe0e9;
+  color: #e84393;
+  transform: rotateY(180deg);
+  flex-direction: column;
+}
+
+.flip-envelope.flipped {
+  transform: rotateY(180deg);
+}
+.flip-back p {
+  font-size: 30px;
+  margin-top: 5px;
+}
+.text-bawah {
+  font-size: 14px;
+  margin-top: -30px; 
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 5px 5px;
+  border-radius: 80px;
+  -webkit-backdrop-filter: blur(10px)
+  display: inline-block;
+}
+.gatau {
+  margin-top: 40px;
+}
