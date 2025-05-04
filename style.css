@@ -2,10 +2,12 @@ body {
   font-family: 'Poppins', sans-serif;
   background: url('https://www.transparenttextures.com/patterns/white-wall-3.png');
 }
+
 .navbar {
   backdrop-filter: blur(10px);
   background-color: rgba(255, 255, 255, 0.4);
 }
+
 .navbar-toggler {
   backdrop-filter: blur(10px);
   background-color: rgba(255, 255, 255, 0.2);
@@ -13,12 +15,14 @@ body {
   padding: 8px 12px;
   border-radius: 8px;
 }
+
 .hero {
   background: linear-gradient(to right, #007bff, #00c6ff);
   color: white;
   text-align: center;
   padding: 80px 20px;
 }
+
 .hero-img {
   width: 150px;
   height: 150px;
@@ -28,9 +32,11 @@ body {
   margin-bottom: 15px;
   transition: transform 0.4s;
 }
+
 .hero-img:hover {
   transform: scale(1.05);
 }
+
 .typewriter h1 {
   overflow: hidden;
   border-right: 3px solid white;
@@ -42,45 +48,67 @@ body {
   font-weight: 600;
   max-width: 100%;
 }
+
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
 }
+
 @keyframes blink {
-  from, to { border-color: transparent }
-  50% { border-color: white }
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: white
+  }
 }
+
 .social-icons a {
   color: white;
   margin: 0 10px;
   font-size: 20px;
   transition: color 0.3s, transform 0.3s;
 }
+
 .social-icons a:hover {
   color: #ffc107;
   transform: scale(1.2);
 }
+
 section {
   padding: 80px 20px;
 }
+
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
   transition: 0.3s;
 }
+
 .gif-section {
   position: relative;
   top: -60px;
 }
+
 .img-fluid {
   max-width: 100%;
   height: auto;
 }
+
 .flip-envelope-container {
   display: flex;
   justify-content: center;
   perspective: 1000px;
 }
+
 .flip-envelope {
   width: 150px;
   height: 150px;
@@ -102,7 +130,7 @@ section {
   font-size: 50px;
   border-radius: 12px;
   background-color: white;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .flip-envelope .flip-front {
@@ -119,20 +147,25 @@ section {
 .flip-envelope.flipped {
   transform: rotateY(180deg);
 }
+
 .flip-back p {
   font-size: 30px;
   margin-top: 5px;
 }
+
 .text-bawah {
   font-size: 14px;
-  margin-top: -30px; 
+  margin-bottom: 30px;
   color: white;
   background-color: rgba(0, 0, 0, 0.4);
-  padding: 5px 5px;
+  padding: 30px 30px;
+  justify-content: center;
+  align-items: center;
   border-radius: 80px;
   -webkit-backdrop-filter: blur(10px);
-display: inline-block;
+  display: inline-block;
 }
+
 .gatau {
   margin-top: 40px;
 }
