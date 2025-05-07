@@ -136,16 +136,66 @@ body.dark-mode {
 .dark-mode .navbar-toggler {
   background-color: rgba(255, 255, 255, 0.2);
 }
-
 .python-logo-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 10px 0;
 }
-
 .python-logo {
-  width: 50px;
+  width: 80px;
+  height: auto;
+}
+.html-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+.html-logo {
+  width: 80px;
+  height: auto;
+}
+.css-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+.css-logo {
+  width: 80px;
+  height: auto;
+}
+.js-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+.js-logo {
+  width: 80px;
+  height: auto;
+}
+.bootstrap-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.bootstrap-logo {
+  width: 80px;
+  height: auto;
+}
+.github-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.github-logo {
+  width: 80px;
   height: auto;
 }
 .nama span {
