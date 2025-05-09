@@ -1,6 +1,8 @@
 AOS.init({
-  delay: 100, 
-  duration: 800,
+  duration: 700,        // durasi animasi (ms)
+  easing: 'ease-in-out', // tipe easing
+  once: true,            // animasi hanya sekali
+  offset: 100            // mulai animasi sebelum elemen 100px masuk layar
 });
 (function() {
   emailjs.init('xTIfJ0y7qTAEUy_dM'); 
@@ -42,5 +44,3 @@ window.addEventListener('load', function () {
     window.scrollTo(0, parseInt(scrollPos, 10));
   }
 });
-
-  
