@@ -1,0 +1,219 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url('https://www.transparenttextures.com/patterns/white-wall-3.png');
+}
+
+.navbar {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.navbar-toggler {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  padding: 7px 12px;
+  border-radius: 8px;
+}
+
+.hero {
+  background: linear-gradient(to right, #007bff, #f0f);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+.hero-img {
+  width: 150px;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid white;
+  margin-bottom: 15px;
+  transition: transform 0.4s;
+}
+
+.hero-img:hover {
+  transform: scale(1.05);
+}
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 20px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ffc107;
+  transform: scale(1.2);
+}
+
+section {
+  padding: 80px 20px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transition: 0.3s;
+}
+.gif-section {
+  position: relative;
+  top: -60px;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.contact-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+.text-orange {
+  color: #F38020;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+.dark-mode .navbar {
+  background-color: rgba(33, 37, 41, 0.8);
+}
+
+.dark-mode .card {
+  background-color: #1f1f1f;
+  color: white;
+}
+
+.dark-mode .list-group-item {
+  background-color: transparent;
+  color: white;
+}
+
+.dark-mode .btn {
+  background-color: #f1f1f1;
+  color: #121212;
+}
+
+.dark-mode section.bg-light,
+.dark-mode section.bg-white {
+  background-color: #1c1c1c !important;
+}
+
+.dark-mode a {
+  color: #f1f1f1;
+}
+
+.dark-mode .navbar-toggler {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.python-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+.python-logo {
+  width: 80px;
+  height: auto;
+}
+.html-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+.html-logo {
+  width: 80px;
+  height: auto;
+}
+.css-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+.css-logo {
+  width: 80px;
+  height: auto;
+}
+.js-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+.js-logo {
+  width: 80px;
+  height: auto;
+}
+.bootstrap-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.bootstrap-logo {
+  width: 80px;
+  height: auto;
+}
+.github-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.github-logo {
+  width: 80px;
+  height: auto;
+}
+.typing-container {
+  font-size: 30px;
+  font-family: 'Syne', sans-serif;
+  white-space: nowrap;
+  color : #ffa;
+}
+
+.cursor {
+  display: inline-block;
+  color: #fff;
+  animation: blink 0.7s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+.batas {
+border-top: solid;
+text-align: center; 
+padding: 10px 0;
+}
