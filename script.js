@@ -1,8 +1,8 @@
 AOS.init({
-  duration: 700,        // durasi animasi (ms)
-  easing: 'ease-in-out', // tipe easing
-  once: true,            // animasi hanya sekali
-  offset: 100            // mulai animasi sebelum elemen 100px masuk layar
+  duration: 700,        
+  easing: 'ease-in-out',
+  once: true,            
+  offset: 100            
 });
 (function() {
   emailjs.init('xTIfJ0y7qTAEUy_dM'); 
@@ -44,3 +44,32 @@ window.addEventListener('load', function () {
     window.scrollTo(0, parseInt(scrollPos, 10));
   }
 });
+
+  const name = "Dafa alfiansyah"; // Ganti dengan nama kamu
+  const typedName = document.getElementById("typed-name");
+
+  let i = 0;
+  let isDeleting = false;
+
+  function typeEffect() {
+    let speed = 150;
+
+    if (isDeleting) {
+      typedName.textContent = name.substring(0, i--);
+      speed = 100;
+    } else {
+      typedName.textContent = name.substring(0, i++);
+    }
+
+    if (!isDeleting && i > name.length) {
+      isDeleting = true;
+      speed = 1500; 
+    } else if (isDeleting && i === 0) {
+      isDeleting = false;
+      speed = 1000; 
+    }
+
+    setTimeout(typeEffect, speed);
+  }
+
+  window.onload = typeEffect;
