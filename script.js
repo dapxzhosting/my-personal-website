@@ -37,22 +37,14 @@ toggleBtn.addEventListener("click", () => {
 window.addEventListener('beforeunload', function () {
   localStorage.setItem('scrollPos', window.scrollY);
 });
-
-window.addEventListener('load', function () {
-  const scrollPos = localStorage.getItem('scrollPos');
-  if (scrollPos !== null) {
-    window.scrollTo(0, parseInt(scrollPos, 10));
-  }
-});
-
-  const name = "Dafa alfiansyah"; // Ganti dengan nama kamu
+  const name = "Dafa alfiansyah"; 
   const typedName = document.getElementById("typed-name");
 
   let i = 0;
   let isDeleting = false;
 
   function typeEffect() {
-    let speed = 70;
+    let speed = 50;
 
     if (isDeleting) {
       typedName.textContent = name.substring(0, i--);
