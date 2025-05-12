@@ -39,37 +39,39 @@ window.addEventListener('beforeunload', function () {
 });
   const name = "Dafa alfiansyah"; 
   const typedName = document.getElementById("typed-name");
+let i = 0;
+let isDeleting = false;
+let loopCount = 0;
+const maxLoops = 2;
 
-  let i = 0;
-  let isDeleting = false;
+function typeEffect() {
+  if (loopCount >= maxLoops) return;
 
-  function typeEffect() {
-    let speed = 50;
+  let speed = 50;
 
-    if (isDeleting) {
-      typedName.textContent = name.substring(0, i--);
-      speed = 50;
-    } else {
-      typedName.textContent = name.substring(0, i++);
-    }
-
-    if (!isDeleting && i > name.length) {
-      isDeleting = true;
-      speed = 400; 
-    } else if (isDeleting && i === 0) {
-      isDeleting = false;
-      speed = 300; 
-    }
-
-    setTimeout(typeEffect, speed);
+  if (isDeleting) {
+    typedName.textContent = name.substring(0, i--);
+    speed = 50;
+  } else {
+    typedName.textContent = name.substring(0, i++);
   }
 
-  window.onload = typeEffect;
+  if (!isDeleting && i > name.length) {
+    isDeleting = true;
+    speed = 400; 
+  } else if (isDeleting && i === 0) {
+    isDeleting = false;
+    loopCount++;
+    speed = 300; 
+  }
 
-  window.addEventListener("load", () => {
-    const preloader = document.getElementById("preloader");
-    preloader.style.opacity = "0";
-    setTimeout(() => {
-      preloader.style.display = "none";
-    }, 500);
-  });
+  setTimeout(typeEffect, speed);
+}
+document.addEventListener("DOMContentLoaded", () => {
+  typeEffect();
+  const preloader = document.getElementById("preloader");
+  preloader.style.opacity = "0";
+  setTimeout(() => {
+    preloader.style.display = "none";
+  }, 500);
+});
