@@ -37,15 +37,14 @@ toggleBtn.addEventListener("click", () => {
 window.addEventListener('beforeunload', function () {
   localStorage.setItem('scrollPos', window.scrollY);
 });
-  const name = "Dafa alfiansyah"; 
-  const typedName = document.getElementById("typed-name");
+const name = "Dafa alfiansyah"; 
 let i = 0;
 let isDeleting = false;
 let loopCount = 0;
 const maxLoops = 2;
-
+let typedName;
 function typeEffect() {
-  if (loopCount >= maxLoops) return;
+  if (!typedName) return;
 
   let speed = 50;
 
@@ -61,17 +60,21 @@ function typeEffect() {
     speed = 400; 
   } else if (isDeleting && i === 0) {
     isDeleting = false;
-    loopCount++;
     speed = 300; 
   }
 
   setTimeout(typeEffect, speed);
 }
+
 document.addEventListener("DOMContentLoaded", () => {
-  typeEffect();
+  typedName = document.getElementById("typed-name");
+  if (typedName) typeEffect();
+
   const preloader = document.getElementById("preloader");
-  preloader.style.opacity = "0";
-  setTimeout(() => {
-    preloader.style.display = "none";
-  }, 500);
+  if (preloader) {
+    preloader.style.opacity = "0";
+    setTimeout(() => {
+      preloader.style.display = "none";
+    }, 500);
+  }
 });
