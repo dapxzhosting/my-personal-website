@@ -1,9 +1,10 @@
-AOS.init({
-  duration: 600,        
-  easing: 'ease-in-out',
-  once: true,            
-  offset: 50            
-});
+
+  document.addEventListener("DOMContentLoaded", function () {
+    AOS.init({
+      duration: 800, 
+      once: true     
+    });
+  });
 (function() {
   emailjs.init('xTIfJ0y7qTAEUy_dM'); 
 })();
