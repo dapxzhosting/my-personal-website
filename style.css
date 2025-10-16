@@ -381,3 +381,17 @@ footer {
   padding: 8px;
   border-radius: 10px;
 }
+#ai-chatbox {
+  background-color: #fff;
+  color: #000;
+}
+
+.user-message {
+  background-color: #e8e8e8;
+  color: #000;
+}
+
+.ai-message {
+  background-color: #d0e7ff;
+  color: #000;
+}
