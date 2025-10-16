@@ -1,5 +1,4 @@
-
-  document.addEventListener("DOMContentLoaded", function () {
+ document.addEventListener("DOMContentLoaded", function () {
     AOS.init({
       duration: 800, 
       once: true     
@@ -79,3 +78,46 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 500);
   }
 });
+  const aiButton = document.getElementById('ai-button');
+  const chatBox = document.getElementById('ai-chatbox');
+  const sendBtn = document.getElementById('send-btn');
+  const userInput = document.getElementById('user-input');
+  const chatBody = document.getElementById('chat-body');
+
+  aiButton.onclick = () => {
+    chatBox.style.display = chatBox.style.display === 'flex' ? 'none' : 'flex';
+  };
+
+  function sendMessage() {
+    const text = userInput.value.trim();
+    if (text === '') return;
+
+    const userMsg = document.createElement('div');
+    userMsg.className = 'user-message';
+    userMsg.textContent = text;
+    chatBody.appendChild(userMsg);
+    userInput.value = '';
+
+    const aiReply = getAIResponse(text);
+
+    const aiMsg = document.createElement('div');
+    aiMsg.className = 'ai-message';
+    aiMsg.textContent = aiReply;
+    chatBody.appendChild(aiMsg);
+
+    chatBody.scrollTop = chatBody.scrollHeight;
+  }
+
+  sendBtn.onclick = sendMessage;
+  userInput.addEventListener('keypress', e => {
+    if (e.key === 'Enter') sendMessage();
+  });
+
+  function getAIResponse(text) {
+    text = text.toLowerCase();
+    if (text.includes('halo')) return 'Hai juga! 😄';
+    if (text.includes('info gombal')) return 'kamu star ya? (coba ketik "iya")';
+    if (text.includes('iya')) return 'start in my hearth 😘🤭😜';
+    if (text.includes('portfolio')) return 'Ini portofolioku! Silakan jelajahi 😉';
+    return 'Hmm... aku belum ngerti maksudmu 😅';
+  }

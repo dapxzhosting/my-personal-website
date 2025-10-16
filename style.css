@@ -267,3 +267,117 @@ footer {
   margin-bottom: 10px;
   transform: translateY(10px);
 }
+.hehe {
+  position: absolute;
+  width: 203px;
+  margin-left: -45px;
+  margin-top: 4440px;
+  border-radius: 50%;
+  z-index: 10;
+  transform-origin: top center;
+  animation: swing 3s ease-in-out infinite;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.4));
+}
+.tali {
+  position: absolute;
+  width: 100px;   
+  height: 200px;
+  z-index: 5;
+  transform-origin: top center;
+  animation: swing 3s ease-in-out infinite;
+  margin-top: 4361px;
+}
+
+@keyframes swing {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(4deg); }
+  75% { transform: rotate(-4deg); }
+}
+
+#ai-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #007bff;
+  color: white;
+  font-size: 24px;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: 0.3s;
+  z-index: 9999;
+}
+#ai-button:hover {
+  background: #0056b3;
+}
+
+#ai-chatbox {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 300px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.chat-header {
+  background: #007bff;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+}
+.chat-header2 {
+  background: #007bff;
+  color: white;
+  padding: 10px;
+  font-weight: sans-serif;
+}
+.chat-body {
+  padding: 10px;
+  height: 250px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.chat-footer {
+  display: flex;
+  border-top: 1px solid #ccc;
+}
+.chat-footer input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+.chat-footer button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.user-message {
+  align-self: flex-end;
+  background: #dcf8c6;
+  padding: 8px;
+  border-radius: 10px;
+}
+.ai-message {
+  align-self: flex-start;
+  background: #f1f0f0;
+  padding: 8px;
+  border-radius: 10px;
+}
