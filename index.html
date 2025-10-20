@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
- <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
   <title>Dafa Portfolio</title>
   <link rel="icon" href="image/iconweb.png" type="image/png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -16,6 +16,19 @@
 </head>
 
 <body>
+
+  <div id="preloader">
+    <div class="loader-content">
+      <div class="loader"></div>
+      <p class="loader-text">Loading Dulu yaaa...</p>
+    </div>
+  </div>
+
+
+  <button id="backToTop" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
       <button id="themeToggle" class="btn btn-outline-dark ms-2">
@@ -24,13 +37,16 @@
       
       <a class="navbar-brand fw-bold" href="#">Dafa Alfiansyah</a>
       
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
+      <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="toggler-line"></span>
+        <span class="toggler-line"></span>
+        <span class="toggler-line"></span>
       </button>
       
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="#tentang">Tentang</a></li>
+          <li class="nav-item"><a class="nav-link" href="#stats">Stats</a></li>
           <li class="nav-item"><a class="nav-link" href="#hobi">Hobi</a></li>
           <li class="nav-item"><a class="nav-link" href="#skills">Keahlian</a></li>
           <li class="nav-item"><a class="nav-link" href="#proyek">Proyek</a></li>
@@ -41,29 +57,48 @@
   </nav>
   
   <header class="hero">
-    <img src="image/prof.webp" alt="Foto Profil" class="hero-img shadow">
-    <div class="typing-container">
-  <span id="typed-name"></span><span class="cursor">|</span>
-</div>
- 
-    <p class="lead">Frontend Developer | Freelance | Gamers</p>
-    <div class="social-icons mt-3">
-      <a href="https://github.com/dapxzhosting"><i class="fab fa-github"></i></a>
-      <a href="https://www.tiktok.com/@dp_spele"><i class="fab fa-tiktok"></i></a>
-      <a href="https://instagram.com/dapboyss25"><i class="fab fa-instagram"></i></a>
-       <a href="https://youtube.com/@dapxyhost?si=BoiJNMBf5OWZIiNG"><i class="fab fa-youtube"></i></a>
+    <div id="particles-js"></div>
+    <div class="hero-content">
+      <img src="image/prof.webp" alt="Foto Profil" class="hero-img shadow">
+      <div class="typing-container">
+        <span id="typed-name"></span><span class="cursor">|</span>
+      </div>
+      <p class="lead">Frontend Developer | Student | Gamers</p>
+      <div class="social-icons mt-3">
+        <a href="https://github.com/dapxzhosting"><i class="fab fa-github"></i></a>
+        <a href="https://www.tiktok.com/@dp_spele"><i class="fab fa-tiktok"></i></a>
+        <a href="https://instagram.com/dafa_alf1"><i class="fab fa-instagram"></i></a>
+        <a href="https://youtube.com/@dapxyhost?si=BoiJNMBf5OWZIiNG"><i class="fab fa-youtube"></i></a>
         <a href="https://discord.com/users/1292852712660009027"><i class="fab fa-discord"></i></a>
+      </div>
     </div>
-    <img src="image/poto.png" alt="skibidi"
-    class="hehe">
-    <img src="image/lanyarad.png" alt="tali"
-    class="tali">
   </header>
 
   <section id="tentang" class="bg-light" data-aos="fade-up">   
-  <div class="container text-center">
+    <div class="container text-center">
       <h2 class="mb-4">Tentang Saya</h2>
       <p>Halo, saya Dafa Alfiansyah, saya seorang pelajar berumur 15 tahun yang berfokus pada web development, design grafis, dan editing video. Saya lebih menyukai pengembangan front-end, dengan fokus pada menciptakan antarmuka yang interaktif, responsif, dan user-friendly menggunakan <strong>CSS, JavaScript dan Bootstrap.</strong> Dalam desain grafis, saya menggunakan Canva dan Figma untuk menghasilkan visual yang menarik dan fungsional, sementara dalam editing video, saya memanfaatkan Alight Motion dan Capcut untuk menghadirkan storytelling yang efektif. Selain itu, saya menguasai teknologi seperti JavaScript, Python dan CSS untuk mendukung kolaborasi dan pengelolaan proyek. Saya terus belajar dan berkomitmen menghadirkan solusi digital yang relevan, inovatif, dan bermakna.</p>
+    </div>
+  </section>
+
+  <section id="stats" class="stats-section" data-aos="fade-up">
+    <div class="container">
+      <div class="row text-center justify-content-center">
+        <div class="col-md-4 col-6 mb-4">
+          <div class="stat-item">
+            <i class="fas fa-code stat-icon"></i>
+            <h3 class="counter" data-target="6">0</h3>
+            <p>Proyek selesai</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-6 mb-4">
+          <div class="stat-item">
+            <i class="fas fa-clock stat-icon"></i>
+            <h3 class="counter" data-target="1">0</h3>
+            <p>Tahun pengalaman</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -79,152 +114,200 @@
     </div>
   </section>
   
-<section id="skills">
-  <div class="container text-center">
-    <h2 class="mb-4">Keahlian</h2>
-
-    <div class="row justify-content-center">
-      <div class="col-md-4 mb-4">
-        <div class="card p-3 skill-card">
-          <img src="image/html.webp" alt="HTML Logo" class="img-fluid mx-auto" style="width: 80px;">
-          <h5 class="mt-3">HTML</h5>
+  <section id="skills">
+    <div class="container text-center">
+      <h2 class="mb-4">Keahlian</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-4 mb-4">
+          <div class="skill-box">
+            <img src="image/html.webp" alt="HTML" class="skill-icon">
+            <h5 class="mt-3">HTML</h5>
+            <div class="progress-bar-container">
+              <div class="progress-bar-fill" data-percent="70"></div>
+            </div>
+            <span class="skill-percent">70%</span>
+          </div>
         </div>
-      </div>
 
-      <div class="col-md-4 mb-4">
-        <div class="card p-3 skill-card">
-          <img src="image/css.webp" alt="CSS Logo" class="img-fluid mx-auto" style="width: 80px;">
-          <h5 class="mt-3">CSS</h5>
+        <div class="col-md-4 mb-4">
+          <div class="skill-box">
+            <img src="image/css.webp" alt="CSS" class="skill-icon">
+            <h5 class="mt-3">CSS</h5>
+            <div class="progress-bar-container">
+              <div class="progress-bar-fill" data-percent="60"></div>
+            </div>
+            <span class="skill-percent">60%</span>
+          </div>
         </div>
-      </div>
 
-      <div class="col-md-4 mb-4">
-        <div class="card p-3 skill-card">
-          <img src="image/js.webp" alt="JS Logo" class="img-fluid mx-auto" style="width: 80px;">
-          <h5 class="mt-3">JavaScript</h5>
+        <div class="col-md-4 mb-4">
+          <div class="skill-box">
+            <img src="image/js.webp" alt="JavaScript" class="skill-icon">
+            <h5 class="mt-3">JavaScript</h5>
+            <div class="progress-bar-container">
+              <div class="progress-bar-fill" data-percent="65"></div>
+            </div>
+            <span class="skill-percent">65%</span>
+          </div>
         </div>
-      </div>
 
-      <div class="col-md-4 mb-4">
-        <div class="card p-3 skill-card">
-          <img src="image/python.webp" alt="Python Logo" class="img-fluid mx-auto" style="width: 80px;">
-          <h5 class="mt-3">Python</h5>
+        <div class="col-md-4 mb-4">
+          <div class="skill-box">
+            <img src="image/python.webp" alt="Python" class="skill-icon">
+            <h5 class="mt-3">Python</h5>
+            <div class="progress-bar-container">
+              <div class="progress-bar-fill" data-percent="65"></div>
+            </div>
+            <span class="skill-percent">65%</span>
+          </div>
         </div>
-      </div>
 
-      <div class="col-md-4 mb-4">
-        <div class="card p-3 skill-card">
-          <img src="image/github.webp" alt="Github Logo" class="img-fluid mx-auto" style="width: 80px;">
-          <h5 class="mt-3">Github</h5>
+        <div class="col-md-4 mb-4">
+          <div class="skill-box">
+            <img src="image/github.webp" alt="Github" class="skill-icon">
+            <h5 class="mt-3">Github</h5>
+            <div class="progress-bar-container">
+              <div class="progress-bar-fill" data-percent="70"></div>
+            </div>
+            <span class="skill-percent">70%</span>
+          </div>
         </div>
-      </div>
 
-      <div class="col-md-4 mb-4">
-        <div class="card p-3 skill-card">
-          <img src="image/bootstrap.webp" alt="Bootstrap Logo" class="img-fluid mx-auto" style="width: 80px;">
-          <h5 class="mt-3">Bootstrap</h5>
+        <div class="col-md-4 mb-4">
+          <div class="skill-box">
+            <img src="image/bootstrap.webp" alt="Bootstrap" class="skill-icon">
+            <h5 class="mt-3">Bootstrap</h5>
+            <div class="progress-bar-container">
+              <div class="progress-bar-fill" data-percent="60"></div>
+            </div>
+            <span class="skill-percent">60%</span>
+          </div>
         </div>
-      </div>
-    </div> 
-  </div>
-</section>
+      </div> 
+    </div>
+  </section>
 
   <div class="gif-section text-center">
     <p>Santai dulu bareng miri adeknya dapa! </p>
     <img src="miri/miri-adek-dapa.gif" class="img-fluid rounded">
   </div>
 
-  <section id="proyek" class="text-center bg-white py-5" style="padding: 60px 20px;">
-    <h2 class="mb-4 display-5">Proyek</h2>
-    <div class="d-flex justify-content-center">
-      <div class="card shadow-lg" style="width: 28rem;">
-        <img src="image/proyek.webp" class="card-img-top img-fluid" alt="Proyek" style="height: auto;">
-        <div class="card-body">
-          <p class="card-text fs-5">Proyek portfolio Pertama</p>
+  <section id="proyek" class="text-center bg-white py-5">
+    <h2 class="mb-5 display-5">Proyek</h2>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6 mb-4">
+          <div class="project-card" data-tilt>
+            <img src="image/proyek.webp" class="project-img" alt="Proyek">
+            <div class="project-overlay">
+              <h5>Portofolio Pertama</h5>
+              <p>Website portofolio pertama</p>
+              <button class="btn btn-light btn-sm" onclick="openModal(0)">Lihat Detail</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+          <div class="project-card" data-tilt>
+            <img src="image/proyek2.webp" class="project-img" alt="Proyek">
+            <div class="project-overlay">
+              <h5>Tools DDoS</h5>
+              <p>Tools</p>
+              <button class="btn btn-light btn-sm" onclick="openModal(1)">Lihat Detail</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
-  
-  <section id="proyek" class="text-center bg-white py-5" style="padding: 60px 20px;">
-    <div class="d-flex justify-content-center">
-      <div class="card shadow-lg" style="width: 28rem;">
-        <img src="image/proyek2.webp" class="card-img-top img-fluid" alt="Proyek" style="height: auto;">
-        <div class="card-body">
-          <p class="card-text fs-5">Proyek tools DDoS</p>
-        </div>
-      </div>
+
+  <div id="projectModal" class="modal-overlay">
+    <div class="modal-content">
+      <span class="modal-close" onclick="closeModal()">&times;</span>
+      <img id="modalImage" src="" alt="Project">
+      <h3 id="modalTitle"></h3>
+      <p id="modalDescription"></p>
+      <div id="modalTech"></div>
     </div>
-  </section>
+  </div>
   
   <section id="contact" class="text-white text-center py-5" style="background-color: #343a40;">
     <div class="container">
       <h2 class="mb-4">Hubungi Saya</h2>
-      <form id="contact-form">
-        <div class="mb-3">
+      <form id="contact-form" class="contact-form-enhanced">
+        <div class="mb-3 form-group-animated">
           <input type="text" class="form-control" id="name" placeholder="Nama" required>
+          <i class="fas fa-user input-icon"></i>
         </div>
-        <div class="mb-3">
+        <div class="mb-3 form-group-animated">
           <input type="email" class="form-control" id="email" placeholder="Email" required>
+          <i class="fas fa-envelope input-icon"></i>
         </div>
-        <div class="mb-3">
+        <div class="mb-3 form-group-animated">
           <textarea class="form-control" id="message" rows="4" placeholder="Pesan" required></textarea>
+          <i class="fas fa-comment input-icon"></i>
         </div>
         
-<div class="box-button">
-  <button type="submit" class="button">Kirim</button>
+        <div class="box-button">
+          <button type="submit" class="button">
+            <span class="button-text">Kirim</span>
+            <i class="fas fa-paper-plane button-icon"></i>
+          </button>
         </div>
-        
       </form>
     </div>
   </section>
 
   <div class="text-center my-4">
-<em>
-    <h6 class="mb-3">Terimakasih sudah mengunjungi website saya.</h6>
+    <em>
+      <h6 class="mb-3">Terimakasih sudah mengunjungi website saya.</h6>
     </em>
     <img src="miri/miricakep.gif" style="max-width: 220px; border-radius: 16px;">
-</div>
-
-<footer>
-  <div class="footer-section">
-    <h3>Github</h3>
-    <a href="https://github.com/dapxzhosting">
-      <i class="fab fa-github"></i>
-    </a>
   </div>
-  
-  <div class="footer-section">
-    <h3>Social Media</h3>
-    <a href="https://instagram.com/dafa_alf1"><i class="fab fa-instagram"></i></a>
-    <a href="mailto:dafaalfiansyahdev@outlook.com"><i class="fas fa-envelope"></i></a>
-    <a href="https://www.tiktok.com/@dp_spele" ><i class="fab fa-tiktok"></i></a>
+
+  <footer>
+    <div class="footer-section">
+      <h3>Github</h3>
+      <a href="https://github.com/dapxzhosting">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    
+    <div class="footer-section">
+      <h3>Social Media</h3>
+      <a href="https://instagram.com/dafa_alf1"><i class="fab fa-instagram"></i></a>
+      <a href="mailto:dafaalfiansyahdev@outlook.com"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.tiktok.com/@dp_spele"><i class="fab fa-tiktok"></i></a>
+    </div>
+  </footer>
+
+  <footer class="batas">
+    © DafaDev 2025. All rights reserved.
+  </footer>
+
+  <div id="ai-button">
+    🤖
   </div>
-</footer>
 
-<footer class="batas">
-  © DafaDev 2025. All rights reserved.
-</footer>
-
-<div id="ai-button">
-  🤖
-</div>
-
-<div id="ai-chatbox">
-  <div class="chat-header">AI Dapxz 💬</div>
+  <div id="ai-chatbox">
+    <div class="chat-header">AI Dapxz 💬
+      <span class="chat-close" onclick="document.getElementById('ai-chatbox').style.display='none'">&times;</span>
+    </div>
     <div class="chat-header2">-Masih tahap awal</div>
-  <div class="chat-body" id="chat-body">
-    <div class="ai-message">Halo! Aku AI Dap, Coba kamu ketik "info gombal" 😄</div>
+    <div class="chat-body" id="chat-body">
+      <div class="ai-message">Halo! Aku AI Dap 😄</div>
+    </div>
+    <div class="chat-footer">
+      <input type="text" id="user-input" placeholder="Ketik sesuatu..." />
+      <button id="send-btn"><i class="fas fa-paper-plane"></i></button>
+    </div>
   </div>
-  <div class="chat-footer">
-    <input type="text" id="user-input" placeholder="Ketik sesuatu..." />
-    <button id="send-btn">Kirim</button>
-  </div>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js" defer></script>
-<script src="script.js" defer></script>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
