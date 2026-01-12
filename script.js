@@ -360,7 +360,7 @@ function startQuiz() {
     },
     {
       question: "Skill Dafa yang tertinggi adalah?",
-      options: ["HTML (75%)", "GitHub (70%)", "Python (65%)", "JavaScript (65%)"],
+      options: ["HTML", "GitHub", "Python", "JavaScript"],
       correct: 0
     },
     {
